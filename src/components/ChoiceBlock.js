@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ChoiceBlock(props) {
 
   return (
-    <div className="ChoiceBlock">
+    <Link to={props.name.toLowerCase()} className="ChoiceBlock">
       <h1>{props.symbol}</h1>
       <p>{props.name}</p>
-    </div>
+    </Link>
   );
 }
 

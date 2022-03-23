@@ -15,6 +15,11 @@ body {
   font-size: 45px;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .ChoiceContainer {
   display: flex;
   flex-wrap: wrap;
