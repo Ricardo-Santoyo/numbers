@@ -7,7 +7,14 @@ function Home() {
     <div className="Home">
       <h1>Numbers!</h1>
       <div className='ChoiceContainer'>
-        <ChoiceBlock symbol="+" name ="Add" />
+        <div className='Container'>
+          <ChoiceBlock symbol="+" name ="Add" />
+          <ChoiceBlock symbol="−" name ="Subtract" />
+        </div>
+        <div className='Container'>
+          <ChoiceBlock symbol="×" name ="Multiply" />
+          <ChoiceBlock symbol="÷" name ="Divide" />
+        </div>
       </div>
     </div>
   );

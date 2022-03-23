@@ -14,3 +14,56 @@ body {
 .Home h1 {
   font-size: 45px;
 }
+
+.ChoiceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.ChoiceBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2f333c;
+  margin: 10px;
+  flex: 1;
+  min-width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px #24272d;
+}
+
+.ChoiceBlock h1 {
+  font-size: 65px;
+  margin: 10px 0;
+}
+
+.ChoiceBlock p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+@media (min-width:500px) {
+  .ChoiceContainer {
+    width: 900px;
+  }
+  
+  .Container {
+    width: 450px;
+  }
+  
+  .ChoiceBlock {
+    min-width: 200px;
+    height: 200px;
+  }
+}
