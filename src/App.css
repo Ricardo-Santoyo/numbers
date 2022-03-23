@@ -67,6 +67,10 @@ a {
   width: 1em;
 }
 
+.Question {
+  text-align: center;
+  font-size: 55px;
+}
 
 @media (min-width:500px) {
   .ChoiceContainer {
