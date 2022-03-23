@@ -5,7 +5,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <h1>Numbers!</h1>
+      <h1 className='Header'>Numbers!</h1>
       <div className='ChoiceContainer'>
         <div className='Container'>
           <ChoiceBlock symbol="+" name ="Add" />
