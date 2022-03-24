@@ -72,6 +72,27 @@ a {
   font-size: 55px;
 }
 
+.Numpad {
+  display: flex;
+  width: 500px;
+  height: 100px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.Numpad span {
+  flex: 1;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+
+.Numpad span:hover {
+  cursor: pointer;
+}
+
 @media (min-width:500px) {
   .ChoiceContainer {
     width: 900px;
