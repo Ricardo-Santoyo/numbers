@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Numpad() {
+function Numpad(props) {
   const numpad = [[7,8,9], [4,5,6], [1,2,3], [0]]
 
   function handleClick(num) {
-    console.log(num);
+    num = props.input + num;
+    props.setInput(num);
   }
 
   return (
