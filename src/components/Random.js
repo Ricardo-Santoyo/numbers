@@ -6,6 +6,13 @@ function Random(props) {
   const [num2, setNum2] = useState(Math.floor(Math.random() * 100));
   const [input, setInput] = useState('');
 
+  function nextQuestion() {
+    // Displays the next question on the screen.
+    setNum1(Math.floor(Math.random() * 100));
+    setNum2(Math.floor(Math.random() * 100));
+    setInput('');
+  }
+
   function checkResponse() {
     // Checks whether input is the correct answer or not.
     let answer = props.operation(num1, num2);
@@ -14,6 +21,7 @@ function Random(props) {
     } else {
       setInput("Incorrect");
     }
+    setTimeout(nextQuestion, 3000);
   }
 
   return (
