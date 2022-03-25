@@ -28,7 +28,9 @@ function Random(props) {
     <div>
       <h1 className="Header">Random</h1>
       <h2 className="Question">{`${num1} ${props.sign} ${num2} = ?`}</h2>
-      <h2>{input}</h2>
+      <div className="Input">
+        <h2>{input}</h2>
+      </div>
       <Numpad input={input} setInput={setInput} checkResponse={checkResponse} />
     </div>
   );

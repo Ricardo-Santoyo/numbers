@@ -70,6 +70,23 @@ svg {
 .Question {
   text-align: center;
   font-size: 55px;
+  margin: 30px 0;
+}
+
+.Input {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.Input h2 {
+  text-align: center;
+  font-size: 55px;
+  height: 70px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin: 5px;
 }
 
 .Numpad {
@@ -78,6 +95,8 @@ svg {
   height: 100px;
   max-width: 90%;
   margin: 0 auto;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .Numpad span {
@@ -86,7 +105,9 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  border-radius: 8px;
+  background-color: #2f333c;
+  box-shadow: 3px 3px 10px #24272d;
 }
 
 .Numpad span:hover {
