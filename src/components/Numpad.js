@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as DeleteIcon } from '../icons/delete.svg';
+import { ReactComponent as EnterIcon } from '../icons/enter.svg';
 
 function Numpad(props) {
   const numpad = [[7,8,9], [4,5,6], [1,2,3]]
@@ -10,7 +11,7 @@ function Numpad(props) {
     } else {
       num = props.input + num;
     };
-    
+
     props.setInput(num);
   }
 
@@ -31,7 +32,7 @@ function Numpad(props) {
       <div className="Numpad">
         <span onClick={() => handleClick("del")}><DeleteIcon /></span>
         <span onClick={() => handleClick(0)}>0</span>
-        <span></span>
+        <span><EnterIcon /></span>
       </div>
     </div>
   );
