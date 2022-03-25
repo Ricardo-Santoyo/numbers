@@ -8,7 +8,12 @@ function Random(props) {
 
   function checkResponse() {
     // Checks whether input is the correct answer or not.
-    console.log(input);
+    let answer = props.operation(num1, num2);
+    if (input == answer) {
+      setInput("Correct");
+    } else {
+      setInput("Incorrect");
+    }
   }
 
   return (
