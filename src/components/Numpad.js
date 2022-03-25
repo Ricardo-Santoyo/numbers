@@ -1,7 +1,8 @@
 import React from 'react';
+import { ReactComponent as DeleteIcon } from '../icons/delete.svg';
 
 function Numpad(props) {
-  const numpad = [[7,8,9], [4,5,6], [1,2,3], [0]]
+  const numpad = [[7,8,9], [4,5,6], [1,2,3]]
 
   function handleClick(num) {
     num = props.input + num;
@@ -23,7 +24,9 @@ function Numpad(props) {
       </div>
 
       <div className="Numpad">
-        {numpad[3].map((n) => (<span key={n} onClick={() => handleClick(n)}>{n}</span>))}
+        <span onClick={() => handleClick("del")}><DeleteIcon /></span>
+        <span onClick={() => handleClick(0)}>0</span>
+        <span></span>
       </div>
     </div>
   );
