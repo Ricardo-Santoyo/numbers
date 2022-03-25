@@ -5,7 +5,12 @@ function Numpad(props) {
   const numpad = [[7,8,9], [4,5,6], [1,2,3]]
 
   function handleClick(num) {
-    num = props.input + num;
+    if (num == "del") {
+      num = props.input.slice(0,-1);
+    } else {
+      num = props.input + num;
+    };
+    
     props.setInput(num);
   }
 
