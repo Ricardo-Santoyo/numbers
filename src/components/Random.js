@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Numpad from './Numpad';
 import Correct from './Correct';
 import Incorrect from './Incorrect';
@@ -7,11 +7,20 @@ import randomNumArray from '../mathFunctions/randomNumArray';
 function Random(props) {
   const [nums, setNums] = useState(randomNumArray(2));
   const [input, setInput] = useState('');
+  const [startTimer, setStartTimer] = useState(false);
+
+  useEffect(() => {
+    if (startTimer) {
+      const timer = setTimeout(nextQuestion, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [startTimer])
 
   function nextQuestion() {
     // Displays the next question on the screen.
     setNums(randomNumArray(2));
     setInput('');
+    setStartTimer(false);
   }
 
   function checkResponse() {
@@ -22,7 +31,7 @@ function Random(props) {
     } else {
       setInput("Incorrect");
     }
-    setTimeout(nextQuestion, 3000);
+    setStartTimer(true);
   }
 
   return (
