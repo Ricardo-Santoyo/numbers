@@ -22,7 +22,7 @@ function Random(props) {
     } else {
       setInput("Incorrect");
     }
-    setTimeout(nextQuestion, 2000);
+    setTimeout(nextQuestion, 3000);
   }
 
   return (
