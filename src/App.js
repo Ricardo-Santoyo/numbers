@@ -5,6 +5,7 @@ import SelectMode from './components/SelectMode';
 import Random from './components/Random';
 import add from './mathFunctions/add';
 import subtract from './mathFunctions/subtract';
+import multiply from './mathFunctions/multiply';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/subtract/random" element={<Random sign="−" operation={subtract} />} />
 
         <Route exact path="/multiply" element={<SelectMode operation="Multiply" />} />
+        <Route exact path="/multiply/random" element={<Random sign="×" operation={multiply} />} />
       </Routes>
     </BrowserRouter>
   );
