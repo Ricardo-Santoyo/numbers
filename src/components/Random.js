@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Numpad from './Numpad';
 import Correct from './Correct';
+import Incorrect from './Incorrect';
 import randomNumArray from '../mathFunctions/randomNumArray';
+
 function Random(props) {
   const [nums, setNums] = useState(randomNumArray(2));
   const [input, setInput] = useState('');
@@ -31,7 +33,8 @@ function Random(props) {
         <h2>{input}</h2>
       </div>
       <Numpad input={input} setInput={setInput} checkResponse={checkResponse} />
-      <Correct />
+      {input === "Correct" ? <Correct /> : null}
+      {input === "Incorrect" ? <Incorrect /> : null}
     </div>
   );
 }
