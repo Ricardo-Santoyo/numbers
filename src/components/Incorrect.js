@@ -2,7 +2,7 @@ import React from 'react';
 import useTimer from './useTimer';
 import { ReactComponent as XIcon } from '../icons/xmark.svg';
 
-function Incorrect() {
+function Incorrect(props) {
   const counter = useTimer();
 
   return (
@@ -10,6 +10,7 @@ function Incorrect() {
       <div className="Incorrect"> 
         <span>Incorrect</span>
         <XIcon />
+        <span className="Next">The correct answer was: {props.answer}</span>
         <span className="Next">Next Question in: {counter}</span>
       </div>
     </div>

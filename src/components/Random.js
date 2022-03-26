@@ -43,7 +43,7 @@ function Random(props) {
       </div>
       <Numpad input={input} setInput={setInput} checkResponse={checkResponse} sign={props.sign} />
       {input === "Correct" ? <Correct /> : null}
-      {input === "Incorrect" ? <Incorrect /> : null}
+      {input === "Incorrect" ? <Incorrect answer={props.operation(nums[0], nums[1])} /> : null}
     </div>
   );
 }
