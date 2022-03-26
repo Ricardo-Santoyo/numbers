@@ -11,10 +11,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
+
         <Route exact path="/add" element={<SelectMode operation="Add" />} />
         <Route exact path="/add/random" element={<Random sign="+" operation={add} />} />
+
         <Route exact path="/subtract" element={<SelectMode operation="Subtract" />} />
         <Route exact path="/subtract/random" element={<Random sign="−" operation={subtract} />} />
+
+        <Route exact path="/multiply" element={<SelectMode operation="Multiply" />} />
       </Routes>
     </BrowserRouter>
   );
