@@ -41,7 +41,7 @@ function Random(props) {
       <div className="Input">
         <h2>{input}</h2>
       </div>
-      <Numpad input={input} setInput={setInput} checkResponse={checkResponse} />
+      <Numpad input={input} setInput={setInput} checkResponse={checkResponse} sign={props.sign} />
       {input === "Correct" ? <Correct /> : null}
       {input === "Incorrect" ? <Incorrect /> : null}
     </div>

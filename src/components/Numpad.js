@@ -30,6 +30,7 @@ function Numpad(props) {
       </div>
 
       <div className="Numpad">
+        {props.sign === "−" ? <span>+/−</span> : null}
         <span onClick={() => handleClick("del")}><DeleteIcon /></span>
         <span onClick={() => handleClick(0)}>0</span>
         <span onClick={props.checkResponse}><EnterIcon /></span>
