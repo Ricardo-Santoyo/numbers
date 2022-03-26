@@ -4,6 +4,7 @@ import Home from './components/Home';
 import SelectMode from './components/SelectMode';
 import Random from './components/Random';
 import SelectTable from './components/SelectTable';
+import Table from './components/Table';
 import add from './mathFunctions/add';
 import subtract from './mathFunctions/subtract';
 import multiply from './mathFunctions/multiply';
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/add" element={<SelectMode operation="Add" />} />
         <Route exact path="/add/random" element={<Random sign="+" operation={add} />} />
         <Route exact path="/add/tables" element={<SelectTable operation={"Add"} />} />
+        <Route exact path="/add/tables/standard" element={<Table sign="+" operation={add} />} />
 
         <Route exact path="/subtract" element={<SelectMode operation="Subtract" />} />
         <Route exact path="/subtract/random" element={<Random sign="−" operation={subtract} />} />
