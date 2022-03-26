@@ -155,7 +155,7 @@ svg {
   font-size: 30px;
 }
 
-@media (min-width:500px) {
+@media (min-width:550px) {
   .ChoiceContainer {
     width: 900px;
   }
