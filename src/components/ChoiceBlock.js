@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function ChoiceBlock(props) {
 
   return (
-    <Link to={props.name.toLowerCase()} className="ChoiceBlock">
+    <Link to={props.link} className="ChoiceBlock">
       <h1>{props.symbol}</h1>
       <p>{props.name}</p>
     </Link>

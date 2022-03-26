@@ -9,8 +9,8 @@ function SelectMode(props) {
     <div className="SelectMode">
       <h1 className="Header">{props.operation}</h1>
       <div className="Container">
-        <ChoiceBlock symbol={<ShuffleIcon />} name ="Random" />
-        <ChoiceBlock symbol={<TableIcon />} name ="Tables" />
+        <ChoiceBlock symbol={<ShuffleIcon />} name ="Random"  link="random" />
+        <ChoiceBlock symbol={<TableIcon />} name ="Tables" link="tables" />
       </div>
     </div>
   );

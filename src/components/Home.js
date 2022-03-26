@@ -8,12 +8,12 @@ function Home() {
       <h1 className='Header'>Numbers!</h1>
       <div className='ChoiceContainer'>
         <div className='Container'>
-          <ChoiceBlock symbol="+" name ="Add" />
-          <ChoiceBlock symbol="−" name ="Subtract" />
+          <ChoiceBlock symbol="+" name ="Add" link="add"/>
+          <ChoiceBlock symbol="−" name ="Subtract" link="subtract"/>
         </div>
         <div className='Container'>
-          <ChoiceBlock symbol="×" name ="Multiply" />
-          <ChoiceBlock symbol="÷" name ="Divide" />
+          <ChoiceBlock symbol="×" name ="Multiply" link="multiply"/>
+          <ChoiceBlock symbol="÷" name ="Divide" link="divide"/>
         </div>
       </div>
     </div>

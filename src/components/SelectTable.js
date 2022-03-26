@@ -9,7 +9,7 @@ function SelectTable(props) {
       <h1 className="Header">{props.operation}</h1>
       <div className="ChoiceContainer">
         <div className="Container">
-          <ChoiceBlock symbol={<TableIcon />} name ="Standard" />
+          <ChoiceBlock symbol={<TableIcon />} name ="Standard" link="standard" />
           <ChoiceBlock symbol="10s" name="Tens" link="10" />
         </div>
 
