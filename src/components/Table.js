@@ -6,7 +6,13 @@ function Table(props) {
   let answer = props.operation(nums[0], nums[1]);
 
   function updateNums() {
-    setNums([nums[0], nums[1] + 1]);
+    if (nums[0] === 12 && nums[1] === 12) {
+      console.log("Congratulations!");
+    } else if (nums[1] === 12) {
+      setNums([nums[0] + 1, 1]);
+    } else {
+      setNums([nums[0], nums[1] + 1]);
+    }
   }
 
   return (
