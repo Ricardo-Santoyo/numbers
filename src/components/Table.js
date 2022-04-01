@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Question from './Question';
 import Complete from './Complete';
 
 function Table(props) {
-  const [nums, setNums] = useState([1,1]);
+  let { id } = useParams();
+  const min = (id === "standard") ? 1 : parseInt(id);
+  const max = (id === "standard") ? 12 : (parseInt(id) + 9);
+  const [nums, setNums] = useState([min,min]);
   const [completed, setCompleted] = useState(false);
   let answer = props.operation(nums[0], nums[1]);
 
   function updateNums() {
-    if (nums[0] === 1 && nums[1] === 12) {
+    if (nums[0] === max && nums[1] === max) {
       setCompleted(true);
-    } else if (nums[1] === 12) {
-      setNums([nums[0] + 1, 1]);
+    } else if (nums[1] === max) {
+      setNums([nums[0] + 1, min]);
     } else {
       setNums([nums[0], nums[1] + 1]);
     }
