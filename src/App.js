@@ -27,6 +27,7 @@ function App() {
         <Route exact path="/multiply" element={<SelectMode operation="Multiply" />} />
         <Route exact path="/multiply/random" element={<Random sign="×" operation={multiply} />} />
         <Route exact path="/multiply/tables" element={<SelectTable operation={"Multiply"} />} />
+        <Route exact path="/multiply/tables/:id" element={<Table sign="×" operation={multiply} />} />
       </Routes>
     </BrowserRouter>
   );
