@@ -8,6 +8,7 @@ import Table from './components/Table';
 import add from './mathFunctions/add';
 import subtract from './mathFunctions/subtract';
 import multiply from './mathFunctions/multiply';
+import divide from './mathFunctions/divide';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/multiply/tables/:id" element={<Table sign="×" operation={multiply} />} />
 
         <Route exact path="/divide" element={<SelectMode operation="Divide" />} />
+        <Route exact path="/divide/random" element={<Random sign="÷" operation={divide} />} />
       </Routes>
     </BrowserRouter>
   );
