@@ -10,3 +10,7 @@ test('prevents mutiple decimal points from being added', () => {
   num = convertToDecimal(num);
   expect(convertToDecimal(num)).toBe("45.");
 });
+
+test('returns 0. if empty string is given', () => {
+  expect(convertToDecimal("")).toBe("0.");
+});
