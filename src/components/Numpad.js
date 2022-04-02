@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as DeleteIcon } from '../icons/delete.svg';
 import { ReactComponent as EnterIcon } from '../icons/enter.svg';
 import convertToNeg from '../mathFunctions/convertToNeg';
+import convertToDecimal from '../mathFunctions/convertToDecimal';
 
 function Numpad(props) {
   const numpad = [[7,8,9], [4,5,6], [1,2,3]]
@@ -13,6 +14,9 @@ function Numpad(props) {
         break;
       case "-":
         num = convertToNeg(props.input);
+        break;
+      case ".":
+        num = convertToDecimal(props.input);
         break;
       default:
         num = props.input + num;
@@ -36,6 +40,7 @@ function Numpad(props) {
 
       <div className="Numpad">
         {props.sign === "−" ? <span onClick={() => handleClick("-")}>+/−</span> : null}
+        {props.sign === "÷" ? <span onClick={() => handleClick(".")}>.</span> : null}
         <span onClick={() => handleClick("del")}><DeleteIcon /></span>
         <span onClick={() => handleClick(0)}>0</span>
         <span onClick={props.checkResponse}><EnterIcon /></span>
