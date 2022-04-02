@@ -28,6 +28,8 @@ function App() {
         <Route exact path="/multiply/random" element={<Random sign="×" operation={multiply} />} />
         <Route exact path="/multiply/tables" element={<SelectTable operation={"Multiply"} />} />
         <Route exact path="/multiply/tables/:id" element={<Table sign="×" operation={multiply} />} />
+
+        <Route exact path="/divide" element={<SelectMode operation="Divide" />} />
       </Routes>
     </BrowserRouter>
   );
