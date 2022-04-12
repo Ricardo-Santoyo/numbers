@@ -33,6 +33,8 @@ function App() {
 
         <Route exact path="/divide" element={<SelectMode operation="Divide" />} />
         <Route exact path="/divide/random" element={<Random sign="÷" operation={divide} />} />
+        <Route exact path="/divide/tables" element={<SelectTable operation={"Divide"} />} />
+        <Route exact path="/divide/tables/:id" element={<Table sign="÷" operation={divide} />} />
       </Routes>
     </BrowserRouter>
   );
