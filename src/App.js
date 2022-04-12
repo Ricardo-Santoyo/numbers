@@ -24,6 +24,7 @@ function App() {
         <Route exact path="/subtract" element={<SelectMode operation="Subtract" />} />
         <Route exact path="/subtract/random" element={<Random sign="−" operation={subtract} />} />
         <Route exact path="/subtract/tables" element={<SelectTable operation={"Subtract"} />} />
+        <Route exact path="/subtract/tables/:id" element={<Table sign="−" operation={subtract} />} />
 
         <Route exact path="/multiply" element={<SelectMode operation="Multiply" />} />
         <Route exact path="/multiply/random" element={<Random sign="×" operation={multiply} />} />
