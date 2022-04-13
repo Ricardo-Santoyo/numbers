@@ -17,6 +17,7 @@ function Home() {
         </div>
         <div className='Container small'>
           <ChoiceBlock symbol="𝑦 = 𝑥" name ="Algebra" link="algebra"/>
+          <ChoiceBlock symbol="𝑓 '(𝑥)" name ="Calculus" link="calculus"/>
         </div>
       </div>
     </div>
