@@ -1,20 +1,22 @@
-function makeExpression(num1, num2, options) {
+function makeExpression(num1, num2, options=[""]) {
   // Returns an algebraic expression
   const operation = (Math.round(Math.random()) === 0) ? "-" : "+";
-  let xpart;
-  switch (options) {
-    case "multiply":
-      xpart = `${num1}𝑥`;
-      break;
-    case "divide":
-      xpart = `𝑥⁄${num1}`;
-      break;
-    case "power":
-      xpart = `𝑥²`;
-      break;
-    default:
-      xpart = "𝑥";
-  }
+  let xpart = "𝑥";
+
+  options.forEach((option, i) => {
+    switch (option) {
+      case "multiply":
+        xpart = `${num1}${xpart}`;
+        break;
+      case "divide":
+        xpart = `${xpart}⁄${num1}`;
+        break;
+      case "power":
+        xpart = (xpart.includes("⁄")) ? `𝑥²⁄${num1}` : `${xpart}²`;
+        break;
+    }
+  });
+
   return `${xpart}${operation}${num2}`
 };
 
