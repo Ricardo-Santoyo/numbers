@@ -1,6 +1,15 @@
 function makeExpression(num1, num2, options) {
+  // Returns an algebraic expression
   const operation = (Math.round(Math.random()) === 0) ? "-" : "+";
-  return `𝑥${operation}${num2}`
+  let xpart;
+  switch (options) {
+    case "multiply":
+      xpart = `${num1}𝑥`;
+      break;
+    default:
+      xpart = "𝑥";
+  }
+  return `${xpart}${operation}${num2}`
 };
 
 export default makeExpression;
