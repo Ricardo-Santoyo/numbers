@@ -6,6 +6,9 @@ function makeExpression(num1, num2, options) {
     case "multiply":
       xpart = `${num1}𝑥`;
       break;
+    case "divide":
+      xpart = `𝑥⁄${num1}`;
+      break;
     default:
       xpart = "𝑥";
   }
