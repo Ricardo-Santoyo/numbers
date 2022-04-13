@@ -15,6 +15,9 @@ function Home() {
           <ChoiceBlock symbol="×" name ="Multiply" link="multiply"/>
           <ChoiceBlock symbol="÷" name ="Divide" link="divide"/>
         </div>
+        <div className='Container small'>
+          <ChoiceBlock symbol="𝑦 = 𝑥" name ="Algebra" link="algebra"/>
+        </div>
       </div>
     </div>
   );

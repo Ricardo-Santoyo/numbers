@@ -5,6 +5,7 @@ import SelectMode from './components/SelectMode';
 import Random from './components/Random';
 import SelectTable from './components/SelectTable';
 import Table from './components/Table';
+import Algebra from './components/Algebra';
 import add from './mathFunctions/add';
 import subtract from './mathFunctions/subtract';
 import multiply from './mathFunctions/multiply';
@@ -35,6 +36,8 @@ function App() {
         <Route exact path="/divide/random" element={<Random sign="÷" operation={divide} />} />
         <Route exact path="/divide/tables" element={<SelectTable operation={"Divide"} />} />
         <Route exact path="/divide/tables/:id" element={<Table sign="÷" operation={divide} />} />
+
+        <Route exact path="/algebra" element={<Algebra />} />
       </Routes>
     </BrowserRouter>
   );

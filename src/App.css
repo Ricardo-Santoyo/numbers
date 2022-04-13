@@ -57,6 +57,10 @@ svg {
   margin: 10px 0;
 }
 
+.small h1{
+  font-size: 50px;
+}
+
 .ChoiceBlock p {
   font-size: 20px;
   margin: 10px 0;
