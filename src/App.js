@@ -6,6 +6,7 @@ import Random from './components/Random';
 import SelectTable from './components/SelectTable';
 import Table from './components/Table';
 import Algebra from './components/Algebra';
+import Expressions from './components/Expressions';
 import Calculus from './components/Calculus';
 import add from './mathFunctions/add';
 import subtract from './mathFunctions/subtract';
@@ -39,6 +40,8 @@ function App() {
         <Route exact path="/divide/tables/:id" element={<Table sign="÷" operation={divide} />} />
 
         <Route exact path="/algebra" element={<Algebra />} />
+        <Route exact path="algebra/expressions" element={<Expressions />} />
+
         <Route exact path="/calculus" element={<Calculus />} />
       </Routes>
     </BrowserRouter>
